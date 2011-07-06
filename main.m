@@ -28,6 +28,7 @@ int main(int argc, char *argv[])
     NSDictionary *sampleOptionsMatrix =
     [NSDictionary dictionaryWithObjectsAndKeys:
      CL_OPTION_OPTIONAL, @"h",              
+     CL_OPTION_OPTIONAL, @"p",              
      CL_OPTION_OPTIONAL, @"j",              
      CL_OPTION_OPTIONAL_WITH_VALUE, @"i",
      nil];
@@ -36,7 +37,7 @@ int main(int argc, char *argv[])
     [commandLine cL_setOptionsMatrix: sampleOptionsMatrix andMinNumberOfParams: MinNumberOfParams];
     parseSuccess = [commandLine cL_parse];
     
-    if([[commandLine parsedCommandLine] count] == 1  && [commandLine cL_optionIsSet: @"1"])
+    if(([commandLine cL_optionIsSet: @"p"]) || ([[commandLine parsedCommandLine] count] == 1  && [commandLine cL_optionIsSet: @"1"]))
     {
         [pool release];
         [commandLine release];

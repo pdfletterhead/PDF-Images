@@ -38,6 +38,7 @@ int c_main(int argc, char *argv[]);
     printf("  -h             : print usage information\n");
     printf("  -i <filePath>  : path to PDF to use as input\n");
     printf("  -j             : write JPEG images as JPEG files\n");
+    printf("  -p             : run in GUI despite other options\n");
     printf("\n"); 
 }
 

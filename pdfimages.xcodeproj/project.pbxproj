@@ -82,6 +82,9 @@
 		26AB3A58129344E600C8AE93 /* LocalPDFDocBuilder.cc in Sources */ = {isa = PBXBuildFile; fileRef = 26AB3A57129344E600C8AE93 /* LocalPDFDocBuilder.cc */; };
 		26AB3A621293467F00C8AE93 /* Error.cc in Sources */ = {isa = PBXBuildFile; fileRef = 26AB3A611293467F00C8AE93 /* Error.cc */; };
 		26AB3ABD12934C7300C8AE93 /* DnDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AB3ABB12934C7300C8AE93 /* DnDView.m */; };
+		3EAB463413C33478003893B9 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 3EAB463313C33478003893B9 /* README */; };
+		3EAB464113C33C83003893B9 /* CommandLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAB464013C33C82003893B9 /* CommandLine.m */; };
+		3EAB464D13C35E27003893B9 /* cliWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAB464C13C35E26003893B9 /* cliWrapper.m */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -274,6 +277,11 @@
 		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		3EAB463313C33478003893B9 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		3EAB463F13C33C82003893B9 /* CommandLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommandLine.h; path = ../CommandLineSample/CommandLine.h; sourceTree = "<group>"; };
+		3EAB464013C33C82003893B9 /* CommandLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommandLine.m; path = ../CommandLineSample/CommandLine.m; sourceTree = "<group>"; };
+		3EAB464B13C35E26003893B9 /* cliWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cliWrapper.h; sourceTree = "<group>"; };
+		3EAB464C13C35E26003893B9 /* cliWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cliWrapper.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* PDF-Images.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF-Images.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -293,6 +301,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3EAB463F13C33C82003893B9 /* CommandLine.h */,
+				3EAB464013C33C82003893B9 /* CommandLine.m */,
 				26AB3ABC12934C7300C8AE93 /* DnDView.h */,
 				26AB3ABB12934C7300C8AE93 /* DnDView.m */,
 				26AB386F1293370700C8AE93 /* PdfImagesAppController.h */,
@@ -518,6 +528,8 @@
 		29B97314FDCFA39411CA2CEA /* pdfimages */ = {
 			isa = PBXGroup;
 			children = (
+				3EAB464B13C35E26003893B9 /* cliWrapper.h */,
+				3EAB464C13C35E26003893B9 /* cliWrapper.m */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -530,6 +542,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3EAB463E13C33C4A003893B9 /* CommandLine */,
 				26AB3965129338E100C8AE93 /* goo */,
 				26AB3879129337D300C8AE93 /* poppler */,
 				26AB39ED1293423600C8AE93 /* fofi */,
@@ -547,6 +560,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3EAB463313C33478003893B9 /* README */,
 				26982CC5129417F300774419 /* Poppler-128.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
@@ -562,6 +576,13 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3EAB463E13C33C4A003893B9 /* CommandLine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CommandLine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -619,6 +640,7 @@
 				26AB3982129338E200C8AE93 /* .gitignore in Resources */,
 				26AB398E129338E200C8AE93 /* Makefile.am in Resources */,
 				26982CC6129417F300774419 /* Poppler-128.icns in Resources */,
+				3EAB463413C33478003893B9 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,6 +724,8 @@
 				26AB3A58129344E600C8AE93 /* LocalPDFDocBuilder.cc in Sources */,
 				26AB3A621293467F00C8AE93 /* Error.cc in Sources */,
 				26AB3ABD12934C7300C8AE93 /* DnDView.m in Sources */,
+				3EAB464113C33C83003893B9 /* CommandLine.m in Sources */,
+				3EAB464D13C35E27003893B9 /* cliWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,7 +782,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PREPROCESSOR_DEFINITIONS = "POPPLER_VERSION=\\\"0.14.5\\\"";
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LIBRARY_SEARCH_PATHS = /usr/X11/lib;
@@ -777,7 +801,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PREPROCESSOR_DEFINITIONS = "POPPLER_VERSION=\\\"0.14.5\\\"";
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LIBRARY_SEARCH_PATHS = /usr/X11/lib;

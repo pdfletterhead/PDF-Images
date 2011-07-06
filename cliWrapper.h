@@ -14,4 +14,10 @@
     
 }
 
+-(void)cw_printUsage;
+
+
+-(void)cw_runPdfimages: (NSString *) argIn :(BOOL) useJpeg;
+
+
 @end
